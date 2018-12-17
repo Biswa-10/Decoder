@@ -1,0 +1,1 @@
+This is a random note to be decoded by our algorithm It is not supposed to mean anything but only to try out there are likely to be a lot of errors since be are using only first order transition matrix but we expect to see descent results in our output there is a lack of dataset but the msg is still not being decoded
