@@ -7,7 +7,6 @@ end
 
 %We assume the encoded message belongs a language say X
 %Calculate the First order transition matrix of language X
-numberOfSymbolsOriginal = 0;%number of symbols in original text
 text = fileread('oldText.txt');    
 transMat = getTransMat(text);
 
