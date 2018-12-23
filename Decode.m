@@ -3,7 +3,7 @@ clc
 %Calculate the First order transition matrix of language X
 text = fileread('oldText.txt'); %text file from which we derive tansition matrix of language X
 [symbolsOriginal,numberOfSymbolsOriginal] = getSymbols(text);%symbols and #symbols in the original text file of language X
-transMat = getTransMat(text,symbolsOriginal,numberOfSymbolsOriginal);
+[transMatOrder1,transMatOrder2] = getTransMat(text,symbolsOriginal,numberOfSymbolsOriginal);
 
 %read encoded text
 symbolsEncoded = zeros(1,numberOfSymbolsOriginal);
@@ -24,9 +24,10 @@ map = setSpace(map,msg,symbolsEncoded,numberOfSymbolsEncoded,numberOfSymbolsOrig
 %run simulation
 for i = 1:200000
     
-    plausibilityCurrent = getPlausibility(msg,map,symbolsEncoded,symbolsOriginal,numberOfSymbolsOriginal,transMat);
+    plausibilityCurrent = getPlausibility(msg,map,symbolsEncoded,symbolsOriginal,numberOfSymbolsOriginal,transMatOrder1,transMatOrder2);
     newMap = swapMap(map,numberOfSymbolsOriginal);
-    plausibilityNew = getPlausibility(msg,newMap,symbolsEncoded,symbolsOriginal,numberOfSymbolsOriginal,transMat);
+    plausibilityNew = getPlausibility(msg,newMap,symbolsEncoded,symbolsOriginal,numberOfSymbolsOriginal,transMatOrder1,transMatOrder2);
+
     
     if(plausibilityNew>plausibilityCurrent)
         map = newMap;
