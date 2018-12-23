@@ -26,7 +26,7 @@ for i = 1:200000
     
     plausibilityCurrent = getPlausibility(msg,map,symbolsEncoded,symbolsOriginal,numberOfSymbolsOriginal,transMat);
     newMap = swapMap(map,numberOfSymbolsOriginal);
-    plausibilityNew = getPlausibility(msg,newMap,symbols,symbolsOriginal,numberOfSymbolsOriginal,transMat);
+    plausibilityNew = getPlausibility(msg,newMap,symbolsEncoded,symbolsOriginal,numberOfSymbolsOriginal,transMat);
     
     if(plausibilityNew>plausibilityCurrent)
         map = newMap;
