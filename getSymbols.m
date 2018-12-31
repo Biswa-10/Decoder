@@ -1,5 +1,5 @@
-function [symbolsOriginal,numberOfSymbols] = getSymbols(text)
-    symbolsOriginal = zeros(1,500);
+function [symbolsOriginal,numberOfSymbols] = getSymbols(text,maxNumberOfCharacters)
+    symbolsOriginal = zeros(1,maxNumberOfCharacters);
     numberOfSymbols = 0 ;
     for i = 1:(strlength(text))
         if(symbolLocation(text(i),symbolsOriginal,numberOfSymbols)==0)

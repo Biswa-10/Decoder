@@ -4,7 +4,6 @@ function [transMatOrder1,transMatOrder2] = getTransMat(text,symbolsOriginal,numb
   
     transMatOrder1 = zeros(numberOfSymbolsOriginal+1,'double');
     transMatOrder2 = zeros(numberOfSymbolsOriginal+1,'double');
-    transMat = zeros(numberOfSymbolsOriginal,'double');
     
     for i=2:numberOfSymbolsOriginal+1
         transMatOrder1(1,i) = symbolsOriginal(1,i-1);

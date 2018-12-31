@@ -7,7 +7,6 @@ function newMap = swapMap(map,numberOfSymbolsOriginal)
     temp = newMap(indices(1,1));
     newMap(indices(1,1)) = newMap(indices(1,2));
     newMap(indices(1,2))=temp;
-    end
-    
+    end  
 end
 

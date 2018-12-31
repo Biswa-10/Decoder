@@ -7,5 +7,5 @@ For a comparison of how the language has evolved over time, the pictorial repres
 
 The intial assumption of a message coded in English has been discarded(Initially we had assumed that the encoded text had only 53 letters - space, A-Z, a-z). The removal of this assumtion leads to the addition of many new symbols so it becomes harder for the code to converge. And also lets to higher probability of the code jumping out of minima. Therefore we intend to try adding another order of transition.
 
-
+*Update: instead of a fixed number of iterations, the termination condition has been updated for a more logical termination
 
